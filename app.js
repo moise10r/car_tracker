@@ -15,5 +15,5 @@ app.use('/', customer);
 
 const PORT = process.env.PORT || 9000;
 app.listen(PORT, () => {
-  console.log(`The server is running on port ${chalk.greenBright(PORT)}`);
+  console.log(`The server is running on port ${PORT}`);
 });

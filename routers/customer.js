@@ -1,7 +1,6 @@
 const express = require('express');
 const { Customer } = require('../models/customer');
 const router = express.Router();
-const moment = require('moment');
 
 router.post('/api/customer', async (req, res) => {
   const { money, cardId, vaccinated } = req.body;
@@ -20,7 +19,6 @@ router.post('/api/customer', async (req, res) => {
     money,
     cardId,
     vaccinated,
-    createdAt: moment(Date.now()).format('LL'),
   });
   try {
     customer.save();
